@@ -21,14 +21,14 @@ public class DynamicHeightNetworkImageView extends NetworkImageView {
     }
 
     public void setAspectRatio(float aspectRatio) {
-        mAspectRatio = aspectRatio;
+      //  mAspectRatio = aspectRatio;
         requestLayout();
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int measuredWidth = getMeasuredWidth();
-        setMeasuredDimension(measuredWidth, (int) (measuredWidth / mAspectRatio));
+        //int measuredWidth = getMeasuredWidth();
+       // setMeasuredDimension(measuredWidth, (int) (measuredWidth / mAspectRatio));
     }
 }

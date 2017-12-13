@@ -9,4 +9,8 @@
 
     <string name="up">Up</string>
 
+    <string name="AppBarName" type="id">XYZ Reader</string>
+    <string name="transationImg">mImageTrans</string>
+
+
 </resources>
