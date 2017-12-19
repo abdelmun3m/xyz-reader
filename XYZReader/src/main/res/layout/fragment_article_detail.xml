@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
     <android.support.design.widget.AppBarLayout
@@ -124,7 +125,6 @@
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
                     android:textColor="@color/LargeText"
-                    android:textColorLink="@color/theme_text_primary"
                     android:textSize="@dimen/detail_body_text_size"
                     android:fontFamily="serif"
 
@@ -142,8 +142,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:fabSize="normal"
-        android:elevation="8dp"
-        app:pressedTranslationZ="12dp"
+        android:elevation="6dp"
+        app:pressedTranslationZ="6dp"
         android:layout_gravity="bottom|end"
         app:borderWidth="0dp"
         app:layout_anchorGravity="bottom|end"

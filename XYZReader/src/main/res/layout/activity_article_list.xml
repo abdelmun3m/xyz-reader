@@ -1,4 +1,5 @@
 <android.support.design.widget.CoordinatorLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -8,21 +9,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?colorPrimary"
-        app:elevation="@dimen/appBarElevation">
-<!--
-     <android.support.design.widget.CollapsingToolbarLayout
-        android:id="@+id/article_list_collaps"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:collapsedTitleTextAppearance=
-            "@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-        app:expandedTitleTextAppearance=
-            "@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-        app:expandedTitleMarginStart="60dp"
-        app:layout_scrollFlags="scroll|exitUntilCollapsed"
-        app:elevation="@dimen/appBarElevation">-->
+        android:layout_height="wrap_content">
 
          <android.support.v7.widget.Toolbar
              android:id="@+id/toolbar"
@@ -31,25 +18,19 @@
              android:layout_marginLeft="@dimen/list_toolbar_side_margin"
              android:layout_marginRight="@dimen/list_toolbar_side_margin"
              app:titleTextColor="@color/theme_text_primary"
-             app:elevation="@dimen/appBarElevation"
+             android:elevation="@dimen/appBarElevation"
              android:layout_gravity="bottom"
              app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
              app:layout_scrollFlags="scroll|enterAlways" />
 
          <ImageView
              android:layout_width="match_parent"
-             android:layout_height="80dp"
+             android:layout_height="80px"
              app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
              android:src="@drawable/logo"
              android:scaleType="center"
              />
 
-
-
-<!--
-
-     </android.support.design.widget.CollapsingToolbarLayout>
--->
 
 
     </android.support.design.widget.AppBarLayout>
@@ -70,8 +51,7 @@
             android:paddingBottom="28dp"
             android:paddingLeft="@dimen/list_side_margin"
             android:paddingRight="@dimen/list_side_margin"
-            android:paddingTop="4dp"
-            android:elevation="8dp" />
+            android:paddingTop="4dp"/>
 
 
 

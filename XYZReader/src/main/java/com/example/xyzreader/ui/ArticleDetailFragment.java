@@ -8,8 +8,6 @@ import android.content.Loader;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 
@@ -20,12 +18,12 @@ import java.util.GregorianCalendar;
 
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
@@ -74,7 +72,7 @@ public class ArticleDetailFragment extends Fragment implements
     private SimpleDateFormat outputFormat = new SimpleDateFormat();
     // Most time functions can only handle 1902 - 2037
     private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
-
+    private  View mainView ;
     Typeface typeface;
     FloatingActionButton shareBtn ;
     /**
@@ -126,7 +124,6 @@ public class ArticleDetailFragment extends Fragment implements
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
-
         AppBarLayout viewById = (AppBarLayout) mRootView.findViewById(R.id.detailAppBar);
         if(savedInstanceState != null)
             viewById.setExpanded(false);
@@ -137,6 +134,8 @@ public class ArticleDetailFragment extends Fragment implements
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
        // mPhotoContainerView = mRootView.findViewById(R.id.photo_container);
         shareBtn = (FloatingActionButton) mRootView.findViewById(R.id.share_fab);
+        mDrawInsetsFrameLayout = (CoordinatorLayout)mRootView.findViewById(R.id.draw_insets_frame_layout);
+
 
 
         mStatusBarColorDrawable = new ColorDrawable(0);
@@ -148,6 +147,7 @@ public class ArticleDetailFragment extends Fragment implements
                         .setType("text/plain")
                         .setText("Some sample text")
                         .getIntent(), getString(R.string.action_share)));
+
             }
         });
 
@@ -235,12 +235,12 @@ public class ArticleDetailFragment extends Fragment implements
                                 shareBtn.setBackgroundTintList(
                                         ColorStateList.valueOf(mMutedLightColor));
                                // updateStatusBar();
+
                             }
                         }
 
                         @Override
                         public void onErrorResponse(VolleyError volleyError) {
-
                         }
                     });
 
